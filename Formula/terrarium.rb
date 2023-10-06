@@ -1,13 +1,13 @@
 class Terrarium < Formula
   desc "Create reusable Terraform templates and build powerful platforms"
   homepage "https://github.com/cldcvr/terrarium"
-  version "0.6"
+  version "0.7"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/cldcvr/terrarium/releases/download/v0.6/terrarium-v0.6-macos-arm64.tar.gz"
-      sha256 "e2c616f0ee1c983bea749a9c1d75e91077134c17e796b278167b3ca2a90097a4"
+      url "https://github.com/cldcvr/terrarium/releases/download/v0.5/terrarium-v0.5-macos-arm64.tar.gz"
+      sha256 "55c7fc7b329ae3a8738c58724f34db6edbf35c0dfd385a59600bd698f61a2b30"
 
       def install
         bin.install "terrarium"
