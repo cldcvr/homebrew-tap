@@ -5,21 +5,21 @@
 class Terrarium < Formula
   desc "Create reusable Terraform templates and build powerful platforms"
   homepage "https://github.com/cldcvr/terrarium"
-  version "0.10"
+  version "0.11"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/cldcvr/terrarium/releases/download/v0.10/terrarium-v0.10-macos-arm64.tar.gz"
-      sha256 "2f53ef783f4852fc4ff3e5c1a9ebde6b6f40d9396b4da2c8443bb995ae2a6655"
+      url "https://github.com/cldcvr/terrarium/releases/download/v0.11/terrarium-v0.11-macos-arm64.tar.gz"
+      sha256 "d7f18af37a125ae98f7f8bc102420a17e1f453dda22d03def7ee62aaf5e644e4"
 
       def install
         bin.install "terrarium"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/cldcvr/terrarium/releases/download/v0.10/terrarium-v0.10-macos-x86_64.tar.gz"
-      sha256 "2ca3d9b34315917c4aec325f9166aa51f38a43594a6cde473284b03a12d867b8"
+      url "https://github.com/cldcvr/terrarium/releases/download/v0.11/terrarium-v0.11-macos-x86_64.tar.gz"
+      sha256 "d5dbe388ba2b9bada223fbb5c9162c5bee8beedda116bbc5535b9245db7be1a4"
 
       def install
         bin.install "terrarium"
@@ -29,16 +29,16 @@ class Terrarium < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/cldcvr/terrarium/releases/download/v0.10/terrarium-v0.10-linux-x86_64.tar.gz"
-      sha256 "91d8bf945042a1a4e75c04f4466d53495b675dd456ff476dbf397984cf2aef32"
+      url "https://github.com/cldcvr/terrarium/releases/download/v0.11/terrarium-v0.11-linux-x86_64.tar.gz"
+      sha256 "9d7815f2163d02ff2fa3fad461e08454b63cab4e37e82676359edfc14156a105"
 
       def install
         bin.install "terrarium"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cldcvr/terrarium/releases/download/v0.10/terrarium-v0.10-linux-arm64.tar.gz"
-      sha256 "c6f0a9653a3429143edf79c38488ee862bc3efe37b42f9547eab893290205a52"
+      url "https://github.com/cldcvr/terrarium/releases/download/v0.11/terrarium-v0.11-linux-arm64.tar.gz"
+      sha256 "1a11bfbeefb81f5618c6e4cfaca4ff1f281265b2263f8c403a5c9298cf95ebf4"
 
       def install
         bin.install "terrarium"
