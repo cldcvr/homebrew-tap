@@ -5,21 +5,21 @@
 class Terrarium < Formula
   desc "Create reusable Terraform templates and build powerful platforms"
   homepage "https://github.com/cldcvr/terrarium"
-  version "0.11"
+  version "0.11.1"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/cldcvr/terrarium/releases/download/v0.11/terrarium-v0.11-macos-arm64.tar.gz"
-      sha256 "d7f18af37a125ae98f7f8bc102420a17e1f453dda22d03def7ee62aaf5e644e4"
+      url "https://github.com/cldcvr/terrarium/releases/download/v0.11.1/terrarium-v0.11.1-macos-arm64.tar.gz"
+      sha256 "b9b13a3208e2e5d14d85bc2faf2ecece884babffff79e0e973f559cb6ed4355c"
 
       def install
         bin.install "terrarium"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/cldcvr/terrarium/releases/download/v0.11/terrarium-v0.11-macos-x86_64.tar.gz"
-      sha256 "d5dbe388ba2b9bada223fbb5c9162c5bee8beedda116bbc5535b9245db7be1a4"
+      url "https://github.com/cldcvr/terrarium/releases/download/v0.11.1/terrarium-v0.11.1-macos-x86_64.tar.gz"
+      sha256 "7ca85870c65657c6935afc11eab05e4ac83a1736d0bdef872969cb50decd6600"
 
       def install
         bin.install "terrarium"
@@ -28,17 +28,17 @@ class Terrarium < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/cldcvr/terrarium/releases/download/v0.11/terrarium-v0.11-linux-x86_64.tar.gz"
-      sha256 "9d7815f2163d02ff2fa3fad461e08454b63cab4e37e82676359edfc14156a105"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/cldcvr/terrarium/releases/download/v0.11.1/terrarium-v0.11.1-linux-arm64.tar.gz"
+      sha256 "5332d5327c29bcef73e543ef606d3977a3b1e30ecac06e1be77b958fe3adb784"
 
       def install
         bin.install "terrarium"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cldcvr/terrarium/releases/download/v0.11/terrarium-v0.11-linux-arm64.tar.gz"
-      sha256 "1a11bfbeefb81f5618c6e4cfaca4ff1f281265b2263f8c403a5c9298cf95ebf4"
+    if Hardware::CPU.intel?
+      url "https://github.com/cldcvr/terrarium/releases/download/v0.11.1/terrarium-v0.11.1-linux-x86_64.tar.gz"
+      sha256 "5ead9a1e5c266b668f6deb5b1842627b40179fb7fb862f9a629c9a4b3690c4c4"
 
       def install
         bin.install "terrarium"
